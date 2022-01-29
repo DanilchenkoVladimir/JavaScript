@@ -1,52 +1,43 @@
 // Task 1//
 
-function calc(operator, value1, value2) {
-    if (operator === '+') {
-        return value1 + value2
-    }
-    else if (operator === '-') {
-        return value1 - value2
-    }
-    else if (operator === '*') {
-        return value1 * value2
-    }
-    else if (operator === '/') {
-        return value1 / value2
-    }
-}
+const cities = ['moscow', 'london', 'berlin', 'porto'];
 
-console.log (calc('+', 4, 7))
-console.log (calc('-', 15, 18))
-console.log (calc('*', 5, 5))
-console.log (calc('/', 49, 7))
+function getCity(arr, cell) {
+    if (cell > arr.length) {
+      return 'null'
+  }  
+    if (cell < 0) {
+      return 'oops!'
+  } 
+    if (cell >= 0) {
+      return arr[cell]
+  }
+}
+  
+console.log (getCity(cities, 4))
 
 //Task 2//
-
-function squareOfSum(number1, number2){
-
-    return (number1 ** 2) + (( 2 * number1) * number2) + (number2 ** 2)
+ 
+function ifUpperCase(str) { 
+    return str.split(/(?=[A-Z])/).join(" ")
+  } 
   
-}
-
-console.log(squareOfSum(2,3))
-console.log(squareOfSum(1,10))
+  console.log(ifUpperCase('uppercase'))
 
 //Task 3//
 
-function finalGrade(exam, projects) {
+let arr = []
+let  summ = 0  
 
-    if (exam >= 90, projects >= 10) {
-        return 'your rating = 100'
-    }
-    else if (exam >= 75, projects >= 5) {
-        return 'your rating = 90'
-    }
-    else if (exam >= 50, projects >= 2) {
-        return 'your rating = 75'
-    }
-    else if (exam < 50, projects < 2) {
-        return 'your rating = 0'
-    }
+function notaMinus(a, b, c , d) {
+  arr.push(a,b,c,d);
+  
+for (let i = 0; i <= arr.length-1; i++) {
+  if (arr[i] > 0) {
+    summ += arr[i]
+  }
 }
-
-console.log (finalGrade(90, 10))
+ return summ
+}
+    
+console.log(notaMinus(1, -4, 7, 12))
