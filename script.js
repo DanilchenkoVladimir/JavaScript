@@ -3,7 +3,7 @@
 const cities = ['moscow', 'london', 'berlin', 'porto'];
 
 function getCity(arr, cell) {
-    if (cell > arr.length) {
+    if (cell === arr.length) {
       return 'null'
   }  
     if (cell < 0) {
@@ -14,9 +14,11 @@ function getCity(arr, cell) {
   }
 }
   
-console.log (getCity(cities, 4))
+console.log (getCity(cities, 4)) //null
+console.log (getCity(cities, -1)) //oops
+console.log (getCity(cities, 1)) //london
 
-//Task 2//
+// //Task 2//
  
 function ifUpperCase(str) { 
     return str.split(/(?=[A-Z])/).join(" ")
