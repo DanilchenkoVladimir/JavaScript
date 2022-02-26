@@ -1,52 +1,17 @@
 // Task 1//
 
-function calc(operator, value1, value2) {
-    if (operator === '+') {
-        return value1 + value2
-    }
-    else if (operator === '-') {
-        return value1 - value2
-    }
-    else if (operator === '*') {
-        return value1 * value2
-    }
-    else if (operator === '/') {
-        return value1 / value2
-    }
+function fakeStr(test) {
+    let newString = [];
+    for(let i = 0; i < test.length; i++){
+        if(test[i] < 5){
+            newString.push(0);
+        } if(test[i] >= 5){
+            newString.push(1);
+        }
+    }  
+    return newString.join('');
 }
 
-console.log (calc('+', 4, 7))
-console.log (calc('-', 15, 18))
-console.log (calc('*', 5, 5))
-console.log (calc('/', 49, 7))
-
-//Task 2//
-
-function squareOfSum(number1, number2){
-
-    return (number1 ** 2) + (( 2 * number1) * number2) + (number2 ** 2)
-  
-}
-
-console.log(squareOfSum(2,3))
-console.log(squareOfSum(1,10))
-
-//Task 3//
-
-function finalGrade(exam, projects) {
-
-    if (exam >= 90, projects >= 10) {
-        return 'your rating = 100'
-    }
-    else if (exam >= 75, projects >= 5) {
-        return 'your rating = 90'
-    }
-    else if (exam >= 50, projects >= 2) {
-        return 'your rating = 75'
-    }
-    else if (exam < 50, projects < 2) {
-        return 'your rating = 0'
-    }
-}
-
-console.log (finalGrade(90, 10))
+console.log(fakeStr('46444')); // '01000'
+console.log(fakeStr('45385593107843568')); // '01011110001100111'
+console.log(fakeStr('509321967506747')); // '101000111101101'
